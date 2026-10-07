@@ -21,3 +21,5 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background:re
 @media(max-width:700px){.board-meta{flex-direction:column;align-items:stretch;gap:10px;margin-bottom:14px}.turn-banner{padding:11px 12px;gap:12px}.turn-copy strong{font-size:22px}.turn-label{font-size:8px;letter-spacing:.6px}.clues-remaining{align-self:flex-end}.team-card.active .team-status{font-size:9px;letter-spacing:.4px}}
 @media(min-width:900px) and (max-height:900px){.turn-banner{padding:8px 15px 8px 11px;gap:11px}.turn-copy strong{font-size:24px}.turn-label{font-size:8px}.board-meta{margin-bottom:13px}}
 @media(min-width:900px) and (max-height:800px){.hero{min-height:85px;margin:10px 0}.hero-art{height:85px}.hero-moses,.hero-jesus{height:85px}.arcade-tag{display:none}.board-meta{margin-bottom:12px}.turn-copy strong{font-size:23px}}
+.board-meta{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.turn-banner{grid-column:2;max-width:65vw}.clues-remaining{grid-column:3;justify-self:end}
+@media(max-width:700px){.board-meta{display:flex}.turn-banner{align-self:center;max-width:100%}}
