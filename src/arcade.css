@@ -51,3 +51,5 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background:re
 .category{height:clamp(52px,8dvh,80px);justify-content:center;padding:5px 7px}.category h2{font-family:'Bungee','Arial Black',sans-serif;font-weight:400;font-size:clamp(14px,1.65vw,23px);line-height:1.25;color:#ffe8a0;text-wrap:balance}.category-topic{display:none}
 @media(max-width:900px){.category h2{font-size:clamp(12px,1.8vw,17px)}}
 @media(max-width:700px){.category{height:clamp(54px,8dvh,70px);padding:3px 1px}.category h2{font-family:'DM Sans',sans-serif;font-weight:800;font-size:clamp(10px,2.7vw,15px);line-height:1.2;color:#ffe8a0}}
+@media(min-width:1100px){.hero{height:clamp(110px,18dvh,230px)}.hero-art{width:clamp(320px,26vw,460px)}.hero-moses{width:48%;left:0}.hero-jesus{width:38%;right:7px}.mass-props{height:clamp(44px,6dvh,70px);left:36%;right:26%;bottom:0}.mass-props .clip-art:first-child{height:100%;width:85px;left:-8px}.mass-props .clip-art:last-child{height:100%;width:50px;right:-9px}}
+@media(min-width:1100px) and (max-height:650px){.hero{height:clamp(85px,16dvh,110px)}}

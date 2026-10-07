@@ -90,7 +90,7 @@ for(const width of [390,320]){
 await page.setViewportSize({width:1366,height:768});
 await page.screenshot({path:'test-results/arcade-projector.png',fullPage:true});
 assert.ok(await page.locator('.final-button').evaluate(el=>el.getBoundingClientRect().bottom<=innerHeight),'final controls fit a 768px projector');
-for(const [width,height] of [[1440,900],[1366,768],[940,650],[768,650],[390,844],[320,640]]){
+for(const [width,height] of [[1920,1080],[1440,900],[1366,768],[940,650],[768,650],[390,844],[320,640]]){
  await page.setViewportSize({width,height});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1),`whole game fits ${width}x${height}`);
  assert.ok(await page.locator('.final-button').evaluate(el=>el.getBoundingClientRect().bottom<=innerHeight),`final button visible at ${width}x${height}`);
