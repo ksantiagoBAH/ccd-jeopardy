@@ -24,7 +24,7 @@ const paths = {
 function Icon({ name, size = 18 }) { return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={paths[name] || paths.star}/></svg>; }
 const artURL = name => `${import.meta.env.BASE_URL}clipart/${name}.png`;
 function Art({ name, className = '', alt = '' }) { return <img class={`clip-art ${className}`} src={artURL(name)} alt={alt} decoding="async" draggable={false}/>; }
-const categoryArt = ['commandment-tablets', 'jesus', 'jesus', null, 'commandment-tablets', 'chalice-and-host'];
+const categoryArt = ['commandment-tablets', 'church-entrance', 'helping-hands', 'open-bible', 'faith-footsteps', 'chalice-and-host'];
 function Celebration({ value = 0, team = '', final = false }) {
   return <div class={`celebration ${final ? 'final-celebration' : ''}`} aria-hidden="true"><div class="celebration-callout"><span>{final ? 'QUEST COMPLETE!' : 'LEVEL UP!'}</span>{!final && <strong>+{value}</strong>}<small>{team}</small></div>{Array.from({ length: 28 }, (_, i) => <i class="pixel-confetti" key={i} style={{ '--x': `${Math.cos(Math.PI + i / 27 * Math.PI) * (160 + i % 5 * 65)}px`, '--y': `${Math.sin(Math.PI + i / 27 * Math.PI) * (210 + i % 5 * 65) - 80}px`, '--spin': `${i * 43}deg`, '--wait': `${i % 4 * .035}s` }}/>)}</div>;
 }

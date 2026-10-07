@@ -1,6 +1,6 @@
 # CCD Jeopardy clip art
 
-Six coordinated comic-style illustrations generated with the built-in image-generation tool. All PNGs have genuine transparent alpha backgrounds. Integrated into Faith Frenzy Arcade, the sixth-grade classroom game.
+Ten comic-style illustrations generated with the built-in image-generation tool. All PNGs have genuine transparent alpha backgrounds. Integrated into Faith Frenzy Arcade, the sixth-grade classroom game. The board uses six distinct category symbols; Jesus and Moses appear in the header.
 
 ## Saved assets
 
@@ -10,8 +10,33 @@ Six coordinated comic-style illustrations generated with the built-in image-gene
 - `wine-cruet.png`
 - `chalice-and-host.png`
 - `jesus.png`
+- `church-entrance.png`
+- `helping-hands.png`
+- `open-bible.png`
+- `faith-footsteps.png`
 
 ## Exact generation prompts
++
+### church-entrance
+
+Use case: illustration-story. Asset type: transparent PNG category illustration for Faith Frenzy, a sixth-grade Catholic classroom arcade quiz. A polished hand-drawn comic game item, bold dark-plum outlines, chunky simplified shapes, warm parchment cream and gold with terracotta and mint-teal accents, restrained flat cel shading. Readable even at 60px, playful but respectful and not babyish. Square composition, subject fills 80% of canvas, centered fully visible. Genuine transparent alpha background. No text, labels, watermark, white sticker border, scene, ground plane, photorealism, thin details or glow.
+Subject: a welcoming small Catholic church facade with a simple cross atop its gable, warm terracotta roof, cream walls, a wide open arched teal doorway and two welcoming golden light shapes in the doorway. Compact symmetrical silhouette, attractive friendly comic illustration. No people.
+
+### helping-hands
+
+Use case: illustration-story. Asset type: transparent PNG category illustration for Faith Frenzy, a sixth-grade Catholic classroom arcade quiz. A polished hand-drawn comic game item, bold dark-plum outlines, chunky simplified shapes, warm parchment cream and gold with terracotta and mint-teal accents, restrained flat cel shading. Readable even at 60px, playful but respectful and not babyish. Square composition, subject fills 80% of canvas, centered fully visible. Genuine transparent alpha background. No text, labels, watermark, white sticker border, scene, ground plane, photorealism, thin details or glow.
+Subject: two anatomically natural hands with different warm skin tones gently reaching to support each other, one from lower left and one from upper right, with a single terracotta-red heart above their connection. Mint-teal and cream sleeve cuffs. Compact strong silhouette expressing love of neighbor, clear warm gesture. No extra fingers, no people or faces.
+
+### open-bible
+
+Use case: illustration-story. Asset type: transparent PNG category illustration for Faith Frenzy, a sixth-grade Catholic classroom arcade quiz. A polished hand-drawn comic game item, bold dark-plum outlines, chunky simplified shapes, warm parchment cream and gold with terracotta and mint-teal accents, restrained flat cel shading. Readable even at 60px, playful but respectful and not babyish. Square composition, subject fills 80% of canvas, centered fully visible. Genuine transparent alpha background. No text, labels, watermark, white sticker border, scene, ground plane, photorealism, thin details or glow.
+Subject: an open Catholic Bible in a mild three-quarter view, thick parchment pages, terracotta leather cover, gold page edges, a teal ribbon bookmark draping down. A small simple gold cross on one page and a few short abstract ink lines on the other, no legible lettering. Warm inviting substantial comic illustration, no rays.
+
+### faith-footsteps
+
+Use case: illustration-story. Asset type: transparent PNG category illustration for Faith Frenzy, a sixth-grade Catholic classroom arcade quiz. A polished hand-drawn comic game item, bold dark-plum outlines, chunky simplified shapes, warm parchment cream and gold with terracotta and mint-teal accents, restrained flat cel shading. Readable even at 60px, playful but respectful and not babyish. Square composition, subject fills 80% of canvas, centered fully visible. Genuine transparent alpha background. No text, labels, watermark, white sticker border, scene, ground plane, photorealism, thin details or glow.
+Subject: a pair of chunky golden shoe-sole footprints progressing diagonally upward, alongside a single terracotta-red heart with a small cream cross in its center. Compact coherent composition, expresses living one's faith through everyday actions. Teal accent along soles, thick dark plum contours. No shoes, legs or people.
+
 
 ### commandment-tablets
 
@@ -41,4 +66,3 @@ Subject: a dignified gold communion chalice, wide cup with a narrow stem and rou
 ### jesus
 
 Use case: illustration-story. Asset type: individual transparent PNG clip art for a sixth-grade Catholic classroom quiz game. Subject: a respectful, welcoming full-body illustration of Jesus, a Jewish Middle Eastern man with olive-brown skin, shoulder-length dark brown hair and a short full beard. Ancient cream robe, warm terracotta-red sash across one shoulder, simple brown sandals, both feet fully visible. Gentle warm smile, kind expressive eyes, one hand extended in welcome, the other resting near his heart; natural accurate hands. Style: appealing hand-drawn comic-book sticker illustration with bold slightly irregular dark-plum ink outlines, simple expressive shapes, flat warm colors, and subtle sparse halftone shading. Match a set of Moses, stone tablets, bread, a wine cruet, and a gold chalice: parchment cream, golden yellow, terracotta, soft teal, dark plum. Playful yet dignified, suitable for ages 11–12, not babyish. Composition: one centered standalone figure, head through sandals fully visible, generous transparent margin on all sides. Background: genuine transparent alpha, no background color, no fake checkerboard, no landscape, no ground plane, no halo or rays. Avoid photorealism, 3D gloss, captions, lettering, watermarks, logos, a white sticker border, other people, extra objects, wounds, or crucifixion imagery.
-

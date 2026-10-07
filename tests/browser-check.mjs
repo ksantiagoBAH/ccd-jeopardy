@@ -14,7 +14,9 @@ assert.equal(await page.locator('.team-card').count(),2);
 assert.equal(await page.locator('h1').textContent(),'Faith Frenzy!');
 assert.ok(await page.locator('img.clip-art').evaluateAll(images=>images.every(im=>im.complete&&im.naturalWidth>0)),'all clip art loads');
 const artNames=await page.locator('img.clip-art').evaluateAll(images=>[...new Set(images.map(im=>im.src.split('/').pop()))]);
-assert.equal(artNames.length,6,'all six art assets are used');
+assert.equal(artNames.length,10,'all ten art assets are used');
+const categoryNames=await page.locator('.category-art img').evaluateAll(images=>images.map(im=>im.src.split('/').pop()));
+assert.equal(new Set(categoryNames).size,6,'every category has its own PNG illustration');
 assert.equal(await page.locator('.tile').count(),30);
 await page.clock.install();
 await page.getByRole('button',{name:'Love of God, 100 points',exact:true}).click();
@@ -101,5 +103,5 @@ await motionPage.getByRole('button',{name:'Gather & Begin, 100 points',exact:tru
 await motionPage.getByRole('button',{name:'Close dialog',exact:true}).click();
 await motionPage.locator('.celebration').waitFor({state:'detached'});
 await motionPage.close();
-console.log('Browser checks passed: six PNG assets, arcade motion and nonblocking celebration, automatic 10s timer, pause/reset/expiry, scoring/undo, editing, persistence, final wagers/results, reset, and 320px/390px layouts.');
+console.log('Browser checks passed: ten PNG assets and six distinct category illustrations, arcade motion and nonblocking celebration, automatic 10s timer, pause/reset/expiry, scoring/undo, editing, persistence, final wagers/results, reset, and 320px/390px layouts.');
 await browser.close();
