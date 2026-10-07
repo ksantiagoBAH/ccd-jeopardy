@@ -1,6 +1,6 @@
 # Faith Frenzy · CCD Arcade
 
-A Preact + Vite classroom game for **two teams**, with the retro Faith Frenzy Arcade design, ten transparent clip-art illustrations, six distinct category symbols, animated clue reveals, score popups, and confetti. The 30-clue board alternates three Ten Commandments categories and three Parts of the Mass categories. Content uses Catholic numbering and is written for sixth graders.
+A Preact + Vite classroom game for **two teams**, with the retro Faith Frenzy Arcade design, ten transparent clip-art illustrations, six distinct clue illustrations and large text-only category headings, animated clue reveals, score popups, and confetti. The 30-clue board alternates three Ten Commandments categories and three Parts of the Mass categories. Content uses Catholic numbering and is written for sixth graders.
 
 ## Run locally
 

@@ -1,6 +1,6 @@
 # CCD Jeopardy clip art
 
-Ten comic-style illustrations generated with the built-in image-generation tool. All PNGs have genuine transparent alpha backgrounds. Integrated into Faith Frenzy Arcade, the sixth-grade classroom game. The board uses six distinct category symbols; Jesus and Moses appear in the header.
+Ten comic-style illustrations generated with the built-in image-generation tool. All PNGs have genuine transparent alpha backgrounds. Integrated into Faith Frenzy Arcade, the sixth-grade classroom game. Clue screens use six distinct category symbols; Jesus and Moses appear in the header. The board uses large text-only category headings for classroom readability.
 
 ## Saved assets
 
