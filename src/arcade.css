@@ -25,3 +25,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background:re
 @media(max-width:700px){.board-meta{display:flex}.turn-banner{align-self:center;max-width:100%}}
 
 .turn-banner{border-color:#eb82bd;border-left-color:#ffe575;box-shadow:4px 4px 0 #472967}.turn-icon{color:#eb82bd}
+.turn-banner{min-width:390px;padding:15px 25px 15px 18px;gap:20px}.turn-copy{flex:1;text-align:center;gap:7px}.turn-copy strong{font-size:42px;line-height:1.2;text-shadow:2px 2px 0 #eb82bd}.turn-label{font-size:11px;letter-spacing:1.2px}.turn-icon svg{width:32px;height:32px}
+@media(max-width:700px){.turn-banner{min-width:0;width:100%;padding:14px 12px;gap:12px}.turn-copy strong{font-size:28px}.turn-label{font-size:9px;letter-spacing:.5px}.turn-icon svg{width:26px;height:26px}}
+@media(min-width:900px) and (max-height:900px){.turn-banner{min-width:360px;padding:12px 20px 12px 15px}.turn-copy strong{font-size:34px}.turn-label{font-size:10px}}
+@media(min-width:900px) and (max-height:800px){.tile{line-height:1.2}}
