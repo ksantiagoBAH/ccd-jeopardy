@@ -9,8 +9,12 @@ const errors=[];page.on('pageerror',e=>errors.push(e.message));
 await page.goto(process.env.TEST_URL || 'http://127.0.0.1:5173/');
 await page.evaluate(()=>document.fonts.ready);
 await fs.mkdir('test-results',{recursive:true});
-await page.screenshot({path:'test-results/midnight-desktop.png',fullPage:true});
+await page.screenshot({path:'test-results/arcade-desktop.png',fullPage:true});
 assert.equal(await page.locator('.team-card').count(),2);
+assert.equal(await page.locator('h1').textContent(),'Faith Frenzy!');
+assert.ok(await page.locator('img.clip-art').evaluateAll(images=>images.every(im=>im.complete&&im.naturalWidth>0)),'all clip art loads');
+const artNames=await page.locator('img.clip-art').evaluateAll(images=>[...new Set(images.map(im=>im.src.split('/').pop()))]);
+assert.equal(artNames.length,6,'all six art assets are used');
 assert.equal(await page.locator('.tile').count(),30);
 await page.clock.install();
 await page.getByRole('button',{name:'Love of God, 100 points',exact:true}).click();
@@ -70,7 +74,7 @@ assert.equal(await page.locator('.team-score strong').first().textContent(),'0')
 assert.equal(await page.locator('.tile:disabled').count(),0);
 for(const width of [390,320]){
  await page.setViewportSize({width,height:844});
- await page.screenshot({path:`test-results/midnight-${width}.png`,fullPage:true});
+ await page.screenshot({path:`test-results/arcade-${width}.png`,fullPage:true});
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`board fits ${width}px`);
  await page.getByRole('button',{name:'Love of God, 100 points',exact:true}).click();
  assert.ok(await page.evaluate(()=>document.querySelector('dialog').scrollWidth<=document.querySelector('dialog').clientWidth),`clue fits ${width}px`);
@@ -82,8 +86,20 @@ for(const width of [390,320]){
  await page.keyboard.press('Escape');
 }
 await page.setViewportSize({width:1366,height:768});
-await page.screenshot({path:'test-results/midnight-projector.png',fullPage:true});
+await page.screenshot({path:'test-results/arcade-projector.png',fullPage:true});
 assert.ok(await page.locator('.final-button').evaluate(el=>el.getBoundingClientRect().bottom<=innerHeight),'final controls fit a 768px projector');
 assert.deepEqual(errors,[]);
-console.log('Browser checks passed: automatic 10s timer, pause/reset/expiry, scoring/undo, editing, persistence, final wagers/results, reset, and 320px/390px layouts.');
+const motionPage=await browser.newPage({viewport:{width:1440,height:1080},reducedMotion:'no-preference'});
+await motionPage.goto(process.env.TEST_URL || 'http://127.0.0.1:5173/');
+await motionPage.getByRole('button',{name:'Love of God, 100 points',exact:true}).click();
+assert.equal(await motionPage.locator('.clue-modal').evaluate(el=>getComputedStyle(el).animationName),'clue-flip-in');
+await motionPage.getByRole('button',{name:'Reveal answer R',exact:false}).click();
+await motionPage.getByRole('button',{name:'Correct +100',exact:true}).click();
+await motionPage.locator('.celebration').waitFor();
+assert.equal(await motionPage.locator('.pixel-confetti').count(),28);
+await motionPage.getByRole('button',{name:'Gather & Begin, 100 points',exact:true}).click();
+await motionPage.getByRole('button',{name:'Close dialog',exact:true}).click();
+await motionPage.locator('.celebration').waitFor({state:'detached'});
+await motionPage.close();
+console.log('Browser checks passed: six PNG assets, arcade motion and nonblocking celebration, automatic 10s timer, pause/reset/expiry, scoring/undo, editing, persistence, final wagers/results, reset, and 320px/390px layouts.');
 await browser.close();

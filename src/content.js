@@ -1,7 +1,7 @@
 const clue = (question, answer, note = '') => ({ question, answer, note });
 export const DECK_REVISION = 2;
 export const defaultDeck = {
-  title: 'Faith in the spotlight',
+  title: 'Faith Frenzy!',
   subtitle: 'The Ten Commandments & the Parts of the Mass',
   categories: [
     { name: 'Love of God', topic: 'commandments', clues: [

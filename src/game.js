@@ -32,6 +32,7 @@ export function loadGame(storage) {
     const g = JSON.parse(storage.getItem(STORAGE_KEY));
     if (!g || g.version !== 1 || !validateDeck(g.deck) || !Array.isArray(g.teams) || g.teams.length !== 2 || !g.teams.every(t => typeof t.name === 'string' && t.name.trim() && t.name.length <= 40 && Number.isSafeInteger(t.score)) || ![0, 1].includes(g.active) || !Array.isArray(g.used) || !g.used.every(id => /^[0-5]-[0-4]$/.test(id)) || ![0, 10, 15, 30, 45, 60].includes(g.timer) || typeof g.sound !== 'boolean' || typeof g.penalties !== 'boolean') return freshGame();
     if (g.final && (!['clue', 'done'].includes(g.final.stage) || !Array.isArray(g.final.wagers) || g.final.wagers.length !== 2 || !g.final.wagers.every(n => Number.isSafeInteger(n) && n >= 0) || !Array.isArray(g.final.results) || g.final.results.length !== 2 || !g.final.results.every(r => r === null || typeof r === 'boolean'))) return freshGame();
+    if (g.deck.title === 'Faith in the spotlight') g.deck.title = defaultDeck.title;
     // History is session-only: restored data never becomes an unchecked undo snapshot.
     return { ...g, deckRevision: DECK_REVISION, deck: g.deckRevision === DECK_REVISION ? g.deck : migrateDeck(g.deck, defaultDeck), history: [], used: [...new Set(g.used)] };
   } catch { return freshGame(); }

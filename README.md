@@ -1,6 +1,6 @@
-# Midnight Show · Faith Edition
+# Faith Frenzy · CCD Arcade
 
-A Preact + Vite classroom game for **two teams**, with the navy-and-gold Midnight Show design. The 30-clue board alternates three Ten Commandments categories and three Parts of the Mass categories. Content uses Catholic numbering and is written for sixth graders.
+A Preact + Vite classroom game for **two teams**, with the retro Faith Frenzy Arcade design, with six transparent clip-art illustrations, animated clue reveals, score popups, and confetti. The 30-clue board alternates three Ten Commandments categories and three Parts of the Mass categories. Content uses Catholic numbering and is written for sixth graders.
 
 ## Run locally
 
@@ -21,7 +21,7 @@ Open the local URL printed by Vite. `npm test` checks scoring and saved-game rul
 4. Push to `main`, or run **Deploy to GitHub Pages** from the Actions tab. The workflow tests, builds, and deploys the game.
 5. Open the URL shown in the successful deployment. Typical project URL: `https://ksantiagoBAH.github.io/ccd-jeopardy/`.
 
-Vite uses relative asset paths, so this works at a repository subpath or a root/custom domain without changing configuration. There is no server, account, database, or API key to configure. Google Fonts are optional; local fallback fonts work if the classroom network blocks them.
+Vite uses relative asset paths, so this works at a repository subpath or a root/custom domain without changing configuration. There is no server, account, database, or API key to configure. Animations respect the device’s reduced-motion preference. Google Fonts are optional; local fallback fonts work if the classroom network blocks them.
 
 ## Classroom controls
 
