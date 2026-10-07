@@ -34,3 +34,5 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background:re
 
 
 
+.hero-copy p{text-align:center}.hero-copy .arcade-tag{display:flex;justify-content:center;text-align:center}
+@media(min-width:900px) and (max-height:800px){.hero-copy .arcade-tag{display:none}}
