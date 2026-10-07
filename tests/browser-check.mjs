@@ -90,6 +90,12 @@ for(const width of [390,320]){
 await page.setViewportSize({width:1366,height:768});
 await page.screenshot({path:'test-results/arcade-projector.png',fullPage:true});
 assert.ok(await page.locator('.final-button').evaluate(el=>el.getBoundingClientRect().bottom<=innerHeight),'final controls fit a 768px projector');
+for(const [width,height] of [[1440,900],[1366,768],[940,650],[768,650],[390,844],[320,640]]){
+ await page.setViewportSize({width,height});
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1),`whole game fits ${width}x${height}`);
+ assert.ok(await page.locator('.final-button').evaluate(el=>el.getBoundingClientRect().bottom<=innerHeight),`final button visible at ${width}x${height}`);
+ await page.screenshot({path:`test-results/fit-${width}x${height}.png`,fullPage:true});
+}
 assert.deepEqual(errors,[]);
 const motionPage=await browser.newPage({viewport:{width:1440,height:1080},reducedMotion:'no-preference'});
 await motionPage.goto(process.env.TEST_URL || 'http://127.0.0.1:5173/');
