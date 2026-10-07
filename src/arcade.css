@@ -36,3 +36,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;background:re
 
 .hero-copy p{text-align:center}.hero-copy .arcade-tag{display:flex;justify-content:center;text-align:center}
 @media(min-width:900px) and (max-height:800px){.hero-copy .arcade-tag{display:none}}
+
+.board-intro{text-align:center;margin-bottom:12px;color:#ded0ef}.board-intro p{font-size:13px;line-height:1.5}.board-intro .arcade-tag{display:flex;justify-content:center;margin-top:7px;font-size:9px}
+@media(max-width:700px){.board-intro{margin-bottom:12px}.board-intro p{font-size:11px}.board-intro .arcade-tag{font-size:8px}.hero{min-height:190px}}
+@media(min-width:900px) and (max-height:800px){.hero{min-height:70px;margin:8px 0}.hero-art,.hero-moses,.hero-jesus{height:70px}.hero h1{font-size:44px;margin:4px 0}.board-intro{margin-bottom:9px}.board-intro p{font-size:11px}.board-intro .arcade-tag{display:flex;font-size:7px;margin-top:4px}.category{min-height:55px}.scoreboard{margin-top:13px}.board-footer{margin-top:9px}}
